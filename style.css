@@ -14,7 +14,7 @@ html {
 
 /* Header Styles */
 .header {
-    background-image: url (img/fon/bg.jpg);
+    background-image:url (img/fon/bg.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
