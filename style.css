@@ -14,7 +14,8 @@ html {
 
 /* Header Styles */
 .header {
-    background-image: url(https://github.com/Maratqqq/SSS/blob/main/img/fon/bg.jpg?raw=true);
+    background-image: url(SSS/img/fon
+/bg.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
