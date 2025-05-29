@@ -1,285 +1,253 @@
-<!DOCTYPE html> <!-- Объявление типа документа - это HTML5 -->
-<html lang="ru"> <!-- Начало HTML-документа, язык - русский -->
-<head> <!-- Служебная часть страницы, не видна пользователю -->
-    <!-- Кодировка символов (чтобы русские буквы отображались правильно) -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
     <meta charset="UTF-8">
-    <!-- Настройка для мобильных устройств (масштабирование) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Заголовок страницы (отображается во вкладке браузера) -->
-    <title>ТрансГаз - Доставка газа</title>
-    
-    <!-- Подключение шрифтов с Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Russo+One&display=swap" rel="stylesheet">
-    <!-- Подключение иконок Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Подключение основного файла стилей -->
+    <title>С-ТрансГаз - Оптовая продажа газа</title>
+    <meta name="description" content="Оптовая продажа качественного газа с быстрой доставкой">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Иконки для разных устройств (фавиконы) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
-    <link rel="icon" href="/img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="/img/favicons/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<body>
+    <header class="header" id="home">
+        <div class="container">
+            <div class="header-line">
+                <div class="header-logo">
+                    <img src="logo.svg" alt="Логотип С-ТрансГаз">
+                </div>
 
-<body> <!-- Видимая часть страницы -->
+                <nav class="nav">
+                    <a class="nav-item" href="#home">ГЛАВНАЯ</a>
+                    <a class="nav-item" href="#about">О НАС</a>
+                    <a class="nav-item" href="#prices">ЦЕНЫ</a>
+                    <a class="nav-item" href="#contacts">КОНТАКТЫ</a>
+                    <a class="nav-item" href="#faq">FAQ</a>
+                </nav>
 
-    <!-- Шапка сайта -->
-    <header class="header">
-        <!-- Блок с логотипом -->
-        <div class="logo">
-            <!-- Изображение логотипа -->
-           <img src="https://raw.githubusercontent.com/Maratqqq/StransGaz/refs/heads/main/img/logo/1033214174468152528.png" alt="ТрансГаз">
-            <div>
-                <!-- Главный заголовок компании -->
-                <h1>ТрансГаз</h1>
-                <!-- Подзаголовок под названием -->
-                <p>Заправка газгольдеров</p>
+                <div class="phone">
+                    <div class="phone-holder">
+                        <div class="phone-img">
+                            <img src="phone.png" alt="Телефон">
+                        </div>
+                        <div class="number"><a class="num" href="tel:+79897438521">+7 (989) 743-85-21</a></div>
+                    </div>
+                    <div class="phone-text">
+                        Свяжитесь с нами для <br> заказа
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <a href="#telegram-form" class="button">Отправить заявку</a>
+                </div>
+
+                <div class="burger-menu">
+                    <button id="burger">
+                        <img src="burger-img.png" alt="Меню">
+                    </button>
+                    <div id="menu" class="burger-slide disp">
+                        <a class="nav-item block" href="#home">ГЛАВНАЯ</a>
+                        <a class="nav-item block" href="#about">О НАС</a>
+                        <a class="nav-item block" href="#prices">ЦЕНЫ</a>
+                        <a class="nav-item block" href="#contacts">КОНТАКТЫ</a>
+                        <a class="nav-item" href="#faq">FAQ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-down">
+                <div class="header-truck">
+                    <img src="gazavoz.png" alt="Газовоз С-ТрансГаз" class="truck-image">
+                </div>
+
+                <div class="header-title">
+                    Добро пожаловать в
+                    <div class="header-subtitle">
+                        С-ТрансГаз
+                    </div>
+                    <div class="header-suptitle">
+                        Оптовая продажа
+                    </div>
+                    <div class="header-bth">
+                        <a href="#telegram-form" class="header-button">Отправить заявку</a>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- Основное меню навигации -->
-        <nav>
-            <ul> <!-- Ненумерованный список пунктов меню -->
-                <li><a href="#home">Главная</a></li> <!-- Пункт меню -->
-                <li><a href="#pricing">Цены</a></li>
-                <li><a href="#advantages">Преимущества</a></li>
-                <li><a href="#workflow">Как мы работаем</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Кнопка "Отправить заявку" -->
-        <a href="#contacts" class="cta">Отправить заявку</a>
-        
-        <!-- Кнопка меню для мобильных устройств (появляется на маленьких экранах) -->
-        <button class="hamburger">
-            <!-- Иконка "гамбургер" (три полоски) -->
-            <i class="fas fa-bars"></i>
-        </button>
     </header>
 
-    <!-- Главный баннер (первая секция под шапкой) -->
-    <section class="hero-section">
-        <!-- Текстовый блок -->
-        <div class="hero-content">
-            <!-- Главный заголовок с выделенным словом "газ" -->
-            <h2>Доставим <span>газ</span> за 4 часа</h2>
-            <!-- Описание под заголовком -->
-            <p>В любое время дня и ночи. Вне зависимости от погодных условий. Гарантия качества и безопасности.</p>
-            <!-- Кнопка заказа -->
-            <a href="#contacts" class="cta-button">Заказать доставку газа</a>
-        </div>
-        
-        <!-- Блок с изображением -->
-        <div class="hero-image">
-            <!-- Картинка газовоза -->
-            <img src="https://raw.githubusercontent.com/Maratqqq/SSS/refs/heads/main/img/1stscreen%201.png" alt="Описание">
-        </div>
-        
-        <!-- Декоративный элемент (фоновая фигура) -->
-        <div class="hero-shape"></div>
-    </section>
+    <main>
+        <section class="cards">
+            <div class="container">
+                <div class="cards-holder">
+                    <article class="card">
+                        <div class="card-image">
+                            <i class="fas fa-fire fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="card-title">
+                            Качественный <span>Газ</span>
+                        </h2>
+                        <p class="card-desc">
+                            Мы поставляем только сертифицированный газ с идеальным соотношением пропана и бутана, что гарантирует стабильную работу вашего оборудования.
+                        </p>
+                    </article>
 
-    <!-- Секция с ценами -->
-    <section class="pricing-section" id="pricing">
-        <!-- Заголовок секции -->
-        <div class="section-header">
-            <h2>Стоимость газа в ваш газгольдер сегодня</h2>
-            <p>Мы предлагаем оптимальное соотношение цены и качества для вашего комфорта</p>
-        </div>
-        
-        <!-- Блок с составом газа -->
-        <div class="gas-composition">
-            <div class="composition-title">Идеальное соотношение</div>
-            <!-- Графическое представление пропорций газа -->
-            <div class="composition-bar">
-                <div class="propane-part">80% Пропан</div> <!-- Часть пропана -->
-                <div class="butane-part">20% Бутан</div> <!-- Часть бутана -->
-            </div>
-        </div>
-        
-        <!-- Основной блок с ценами -->
-        <div class="gas-container">
-            <!-- Левый блок - информация о бутане -->
-            <div class="gas-block left-block">
-                <div class="gas-name">БУТАН</div> <!-- Название газа -->
-                <div class="gas-price">25.50 <span>₽/литр</span></div> <!-- Цена -->
-                <div class="gas-info"> <!-- Описание -->
-                    Испарение Бутана происходит только до 0 градусов и годится для использования в тёплое время года
-                </div>
-                <!-- Кнопка заказа -->
-                <a href="#contacts" class="order-button">Заказать</a>
-            </div>
-            
-            <!-- Центральный блок - изображение газовоза -->
-            <div class="gas-image-container">
-               <img src="https://raw.githubusercontent.com/Maratqqq/SSS/refs/heads/main/img/4444.png" alt="ТрансГаз">
-            </div>
-            
-            <!-- Правый блок - информация о пропане -->
-            <div class="gas-block right-block">
-                <div class="gas-name">ПРОПАН</div>
-                <div class="gas-price">32.75 <span>₽/литр</span></div>
-                <div class="gas-info">
-                    Физически испарение происходит до -40 градусов, что позволяет использовать его в наших с вами погодных условиях
-                </div>
-                <a href="#contacts" class="order-button">Заказать</a>
-            </div>
-        </div>
-    </section>
+                    <article class="card">
+                        <div class="card-image">
+                            <i class="fas fa-truck fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="card-title">
+                            Быстрая <span>доставка</span>
+                        </h2>
+                        <p class="card-desc">
+                            Доставляем газ в течение 4 часов после заказа, в любое время суток. Наши водители всегда на связи.
+                        </p>
+                    </article>
 
-    <!-- Секция преимуществ компании -->
-    <section class="advantages-section" id="advantages">
-        <!-- Заголовок секции -->
-        <div class="section-header">
-            <h2>Почему выбирают нас</h2>
-            <p>Мы заботимся о каждом клиенте и предлагаем лучшие условия на рынке</p>
-        </div>
-        
-        <!-- Сетка преимуществ (4 карточки) -->
-        <div class="advantages-grid">
-            <!-- Карточка преимущества 1 -->
-            <div class="advantage-card animate animate-delay-1">
-                <div class="advantage-icon">
-                    <!-- Иконка галочки в круге -->
-                    <i class="fas fa-check-circle"></i>
+                    <article class="card">
+                        <div class="card-image">
+                            <i class="fas fa-user-tie fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="card-title">
+                            Опытные <span>специалисты</span>
+                        </h2>
+                        <p class="card-desc">
+                            Наши сотрудники имеют более 10 лет опыта работы с газовым оборудованием и проходят регулярное обучение.
+                        </p>
+                    </article>
                 </div>
-                <h3 class="advantage-title">Качественный газ</h3>
-                <p class="advantage-text">Мы поставляем только сертифицированный газ с идеальным соотношением пропана и бутана, что гарантирует стабильную работу вашего оборудования.</p>
             </div>
-            
-            <!-- Карточка преимущества 2 -->
-            <div class="advantage-card animate animate-delay-2">
-                <div class="advantage-icon">
-                    <!-- Иконка грузовика -->
-                    <i class="fas fa-truck"></i>
-                </div>
-                <h3 class="advantage-title">Быстрая доставка</h3>
-                <p class="advantage-text">Доставляем газ в течение 4 часов после заказа, в любое время суток. Наши водители всегда на связи.</p>
-            </div>
-            
-            <!-- Карточка преимущества 3 -->
-            <div class="advantage-card animate animate-delay-3">
-                <div class="advantage-icon">
-                    <!-- Иконка человека в галстуке -->
-                    <i class="fas fa-user-tie"></i>
-                </div>
-                <h3 class="advantage-title">Опытные специалисты</h3>
-                <p class="advantage-text">Наши сотрудники имеют более 10 лет опыта работы с газовым оборудованием и проходят регулярное обучение.</p>
-            </div>
-            
-            <!-- Карточка преимущества 4 -->
-            <div class="advantage-card animate animate-delay-4">
-                <div class="advantage-icon">
-                    <!-- Иконка щита -->
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3 class="advantage-title">Гарантия безопасности</h3>
-                <p class="advantage-text">Соблюдаем все нормы и требования безопасности при транспортировке и заправке. Наша техника проходит регулярный техосмотр.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Секция "Как мы работаем" -->
-    <section class="workflow-section" id="workflow">
-        <!-- Заголовок секции -->
-        <div class="section-header">
-            <h2>Как мы работаем</h2>
-            <p>Простая и прозрачная схема сотрудничества для вашего удобства</p>
-        </div>
+        <section class="history" id="about">
+            <div class="container">
+                <div class="history-holder">
+                    <div class="history-info">
+                        <h2 class="history-title">
+                            Наша <span>История</span>
+                        </h2>
+                        <p class="history-desc">
+                            История нашей компании началась в 2002 году, когда ООО "Техноком", основанное в 1995 году, приняло стратегическое решение о переименовании и смене направления деятельности. Новое название - ООО "Странс-Газ" - ознаменовало переход к специализации на поставках газа (СУГ) для бытового и коммерческого сектора.
+                        </p>
+                        <div class="history-number">
+                            <div class="number-item">
+                                10 <span>Лет на рынке</span>
+                            </div>
+                            <div class="number-item">
+                                1000+ <span>Довольных клиентов</span>
+                            </div>
+                            <div class="number-item">
+                                31 <span>Единиц спецтехники</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="history-images">
+                        <img class="imgages-1" src="1.png" alt=" 1">
+                        <img class="imgages-2" src="2.png" alt=" 2">
+                        <img class="imgages-3" src="3.png" alt=" 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="black-block">
+            <div class="container">
+                <div class="block-holder">
+                    <div class="left">
+                        <h2 class="left-title">
+                            Только в этом месяце!
+                        </h2>
+                        <p class="left-text">
+                            Заправка газгольдера от 25 000 ₽ с бесплатной доставкой
+                        </p>
+                    </div>
+                    <div class="right">
+                        <div class="right-button">
+                            <a href="#telegram-form" class="right-btn">Отправить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gas-prices" id="prices">
+            <div class="container">
+                <h2 class="gas-prices-title">
+                    Стоимость газа<span> в ваш газгольдер сегодня</span>
+                </h2>
+                <div class="gas-types">
+                    <article class="gas-item">
+                        <div class="gas-icon">⛽</div>
+                        <div class="gas-content">
+                            <h3>БУТАН <span class="price">24 ₽/литр</span></h3>
+                            <p>Испарение Бутана происходит только до 0 градусов и годится для использования в тёплое время года</p>
+                        </div>
+                    </article>
+                    <article class="gas-item">
+                        <div class="gas-icon">🔥</div>
+                        <div class="gas-content">
+                            <h3>ПРОПАН <span class="price">34 ₽/литр</span></h3>
+                            <p>Физически испарение происходит до -40 градусов, что позволяет использовать его в наших с вами погодных условиях</p>
+                        </div>
+                    </article>
+                    <article class="gas-item">
+                        <div class="gas-icon">⚖️</div>
+                        <div class="gas-content">
+                            <h3>Стандартная смесь (80% пропана / 20% бутана)</h3>
+                            <p><span class="price">от 25 ₽/литр</span> при заказе от 1000 литров</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu" id="contacts">
+            <div class="container">
+                <h2 class="menu-title">
+                    Наши контакты
+                </h2>
+                <div class="menu-items">
+                    <article class="menu-item">
+                        <div class="menu-image">
+                            <i class="fas fa-phone-alt fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="menu-text">
+                            Телефон
+                        </h3>
+                        <p class="menu-subtext">
+                            +7 (989) 743-85-21 <br> Круглосуточно, без выходных
+                        </p>
+                    </article>
+                    <article class="menu-item">
+                        <div class="menu-image">
+                            <i class="fas fa-map-marker-alt fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="menu-text">
+                            Адрес
+                        </h3>
+                        <p class="menu-subtext">
+                            г. Дербент, ул. С-Транс-Газ, улица Шеболдаева, 56/2 <br> Офис 305<br>
+                            Работаем: Пн-Пт с 9:00 до 18:00
+                        </p>
+                    </article>
+                    <article class="menu-item">
+                        <div class="menu-image">
+                            <i class="fas fa-envelope fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="menu-text">
+                            Электронная почта
+                        </h3>
+                        <p class="menu-subtext">
+                            Ответим в течение двух часов <br> Для коммерческих предложений: sales@transgaz.ru
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
         
-        <!-- Контейнер с шагами работы -->
-        <div class="steps-container">
-            <!-- Декоративная линия, соединяющая шаги -->
-            <div class="steps-line"></div>
-            
-            <!-- Шаг 1 -->
-            <div class="step animate animate-delay-1">
-                <div class="step-number">1</div> <!-- Номер шага -->
-                <h3 class="step-title">Заявка</h3> <!-- Название шага -->
-                <p class="step-text">Оставляете заявку на сайте или по телефону. Наш оператор ответит на все ваши вопросы.</p>
-            </div>
-            
-            <!-- Шаг 2 -->
-            <div class="step animate animate-delay-2">
-                <div class="step-number">2</div>
-                <h3 class="step-title">Подтверждение</h3>
-                <p class="step-text">Наш менеджер связывается с вами для уточнения деталей и согласовывает время доставки.</p>
-            </div>
-            
-            <!-- Шаг 3 -->
-            <div class="step animate animate-delay-3">
-                <div class="step-number">3</div>
-                <h3 class="step-title">Доставка</h3>
-                <p class="step-text">Доставляем газ в течение 4 часов после подтверждения. Водитель предупредит о своем приезде.</p>
-            </div>
-            
-            <!-- Шаг 4 -->
-            <div class="step animate animate-delay-4">
-                <div class="step-number">4</div>
-                <h3 class="step-title">Оплата</h3>
-                <p class="step-text">Оплачиваете заказ после заправки газгольдера. Принимаем наличные и безналичный расчет.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Секция "О нас" -->
-    <section class="about-section" id="about">
-        <!-- Заголовок секции -->
-        <div class="section-header">
-            <h2>О компании ТрансГаз</h2>
-            <p>Наша история, миссия и ценности</p>
-        </div>
-        
-        <!-- Основной контейнер секции -->
-        <div class="about-container">
-            <!-- Текстовый блок -->
-            <div class="about-content animate animate-delay-1">
-                <div class="about-text">
-                    <!-- Подзаголовок "Наша история" -->
-                    <h3>Наша история</h3>
-                    <!-- Текст истории -->
-                    <p>История нашей компании началась в 2002 году, когда ООО "Техноком", основанное в 1995 году, приняло стратегическое решение о переименовании и смене направления деятельности. Новое название – ООО "Стран-Газ" – ознаменовало переход к специализации на поставках газа (СУГ) для бытового и коммерческого сектора.</p>
-                    
-                    <!-- Подзаголовок "Наша миссия" -->
-                    <h3>Наша миссия</h3>
-                    <!-- Текст миссии -->
-                    <p>Мы стремимся сделать использование газа максимально удобным и безопасным для наших клиентов, предлагая высокое качество сервиса, оперативную доставку и индивидуальный подход к каждому заказчику.</p>
-                    
-                    <!-- Подзаголовок "Наши ценности" -->
-                    <h3>Наши ценности</h3>
-                    <!-- Список ценностей -->
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Безопасность - превыше всего</li>
-                        <li><i class="fas fa-check-circle"></i> Клиентоориентированность</li>
-                        <li><i class="fas fa-check-circle"></i> Профессионализм сотрудников</li>
-                        <li><i class="fas fa-check-circle"></i> Ответственность перед обществом</li>
-                        <li><i class="fas fa-check-circle"></i> Инновации в обслуживании</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Блок со статистикой -->
-            <div class="about-stats animate animate-delay-2">
-                <!-- Карточка статистики 1 -->
-                <div class="stat-card">
-                    <div class="stat-number" data-count="13">20</div> <!-- Число -->
-                    <div class="stat-title">Лет на рынке</div> <!-- Подпись -->
-                </div>
-                
-                <!-- Карточка статистики 2 -->
-                <div class="stat-card">
-                    <div class="stat-number" data-count="2500">1000+</div>
-                    <div class="stat-title">Довольных клиентов</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Секция FAQ (Часто задаваемые вопросы) -->
+                     <!-- Секция FAQ (Часто задаваемые вопросы) -->
     <section class="faq-section" id="faq">
         <!-- Заголовок секции -->
         <div class="section-header">
@@ -288,7 +256,7 @@
         </div>
         
         <!-- Контейнер с вопросами -->
-        <div class="faq-container">
+        <div class="faq-container" id="faq">
             <div class="faq-item animate animate-delay-1">
                 <div class="faq-question">
                     <h3>Как быстро осуществляется доставка газа?</h3>
@@ -414,147 +382,64 @@
             
         </div>
     </section>
+                     
 
-    <!-- Секция контактов -->
-    <section class="contacts-section" id="contacts">
-        <!-- Заголовок секции -->
-        <div class="section-header">
-            <h2>Контакты</h2>
-            <p>Свяжитесь с нами любым удобным способом</p>
-        </div>
-        
-        <!-- Контейнер с контактными карточками -->
-        <div class="contacts-container">
-            <!-- Карточка контакта 1 (телефон) -->
-            <div class="contact-card animate animate-delay-1">
-                <div class="contact-icon">
-                    <!-- Иконка телефона -->
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <h3 class="contact-title">Телефон</h3>
-                <div class="contact-info">
-                    <!-- Ссылка на номер телефона -->
-                    <p><a href="tel:+78001234567">8 (800) 123-45-67</a></p>
-                    <p>Круглосуточно, без выходных</p>
-                </div>
-            </div>
-            
-            <!-- Карточка контакта 2 (адрес) -->
-            <div class="contact-card animate animate-delay-2">
-                <div class="contact-icon">
-                    <!-- Иконка метки на карте -->
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <h3 class="contact-title">Адрес</h3>
-                <div class="contact-info">
-                    <p>г. Дербент, ул. С-ТрансГаз, улица Шеболдаева, 56/2</p>
-                    <p>Офис 305</p>
-                    <p>Работаем: Пн-Пт с 9:00 до 18:00</p>
-                </div>
-            </div>
-            
-            <!-- Карточка контакта 3 (email) -->
-            <div class="contact-card animate animate-delay-3">
-                <div class="contact-icon">
-                    <!-- Иконка конверта -->
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3 class="contact-title">Электронная почта</h3>
-                <div class="contact-info">
-                    <!-- Ссылка на email -->
-                    <p><a href="mailto:info@transgaz.ru">info@transgaz.ru</a></p>
-                    <p>Ответим в течение двух часов</p>
-                    <p>Для коммерческих предложений: <a href="mailto:sales@transgaz.ru">sales@transgaz.ru</a></p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Форма обратной связи -->
-        <div class="contact-form animate animate-delay-4">
-            <h3>Заказать</h3>
-            <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
-            
-            <!-- Начало формы -->
-            <form>
-                <!-- Группа полей для имени -->
-                <div class="form-group">
-                    <label for="name">Ваше имя</label> <!-- Подпись поля -->
-                    <input type="text" id="name" class="form-control" placeholder="Иван Иванов" required>
-                </div>
-                
-                <!-- Группа полей для телефона -->
-                <div class="form-group">
-                    <label for="phone">Телефон</label>
-                    <input type="tel" id="phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
-                </div>
-                
-                <!-- Группа полей для сообщения -->
-                <div class="form-group">
-                    <label for="message">Ваш вопрос</label>
-                    <textarea id="message" class="form-control" placeholder="Опишите ваш вопрос или заказ"></textarea>
-                </div>
-                
-                <!-- Кнопка отправки формы -->
-                <button type="submit" class="submit-btn">Отправить заявку</button>
-            </form>
-        </div>
-    </section>
 
-    <!-- Подвал сайта -->
+
+        <section class="coment">
+            <div class="container">
+                <blockquote class="coment-text">
+                    "Надолго запомню, как "С-ТрансГаз" спас наш загородный дом от холода! Это не просто доставка газа — это кусочек тепла и заботы в любое время года. Отдельное спасибо за оперативность и внимание к деталям: водитель не только привез газ, но и проверил оборудование. Теперь только к вам и будем рекомендовать всем соседям и друзьям, особенно тем, кто ценит надёжность и душевный подход!"
+                </blockquote>
+                <div class="coment-image">
+                    <img src="face.png" class="coment-img" alt="Фото клиента">
+                </div>
+                <p class="coment-type">
+                    Посетитель
+                </p>
+                <p class="coment-name">
+                    Николай
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-form" id="telegram-form">
+            <div class="container">
+                <h2 class="form-subtitle">Заполните форму и мы свяжемся с вами в ближайшее время</h2>
+                <form id="telegram-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-control" placeholder="Ваш вопрос"></textarea>
+                    </div>
+                    <div class="form-agree">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">Согласен на обработку данных</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <!-- Основное содержимое подвала -->
         <div class="footer-content">
-            <!-- Блок "О компании" -->
-            <div class="footer-about">
-                <div class="footer-logo">
-                    <h3>ТрансГаз</h3>
-                    <p>ООО "ТрансГаз" - доставка газа по Москве и области. Надежность и качество с 2010 года.</p>
-                </div>
-                <!-- Ссылки на соцсети -->
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-vk"></i></a> <!-- ВКонтакте -->
-                    <a href="#"><i class="fab fa-telegram"></i></a> <!-- Telegram -->
-                    <a href="#"><i class="fab fa-whatsapp"></i></a> <!-- WhatsApp -->
-                    <a href="#"><i class="fab fa-instagram"></i></a> <!-- Instagram -->
-                </div>
+            <div class="footer-info">
+                <p>© 2024 ООО "С-ТрансГаз". Все права защищены.</p>
+                <p>ИНН 0568859374 | ОГРН 1140572000165</p> 
+                <p>Республика Дагестан, г. Дербент, ул. Шеболдаева, 56/2</p>
             </div>
-            
-            <!-- Блок с ссылками на разделы -->
             <div class="footer-links">
-                <h4>Меню</h4>
-                <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#advantages">Преимущества</a></li>
-                    <li><a href="#pricing">Цены</a></li>
-                    <li><a href="#workflow">Как мы работаем</a></li>
-                    <li><a href="#testimonials">О нас</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
+                <a href="privacy-policy.html">Политика конфиденциальности</a>
             </div>
-            
-            <!-- Блок с контактами в подвале -->
-            <div class="footer-contact">
-                <h4>Контакты</h4>
-                <p><i class="fas fa-phone-alt"></i> <a href="tel:+78001234567">8 (800) 123-45-67</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@transgaz.ru">info@transgaz.ru</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Газовиков, 15</p>
-                <p><i class="fas fa-clock"></i> Пн-Пт: 9:00 - 18:00</p>
-            </div>
-        </div>
-        
-        <!-- Блок с копирайтом -->
-        <div class="copyright">
-            © 2023 ООО "ТрансГаз". Все права защищены.
         </div>
     </footer>
 
-    <!-- Кнопка "Наверх" (появляется при прокрутке) -->
-    <div class="back-to-top">
-        <!-- Иконка стрелки вверх -->
-        <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <!-- Подключение JavaScript-файла -->
-    <script src="scripts/script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
