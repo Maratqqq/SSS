@@ -14,7 +14,7 @@ html {
 
 /* Header Styles */
 .header {
-    background-image:url (img/fon/bg.jpg);
+    background-image: url(bg.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -377,7 +377,7 @@ html {
 
 /* Menu Section */
 .menu {
-    background-image: url(menu-bg.png);
+    background-image: url(img/fon/menu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
