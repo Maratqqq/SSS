@@ -311,68 +311,78 @@ html {
 
 /* Gas Prices */
 .gas-prices {
+    padding: 100px 0;
     background-color: #f8f9fa;
-    padding: 40px 0;
-    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Контейнер для контента */
+.gas-prices .container {
+    position: relative;
+    z-index: 2;
+}
+
+
 .gas-prices-title {
-    font-size: 32px;
+    font-family: 'Tinos', serif;
+    font-size: 42px;
     font-weight: 700;
-    color: #333;
+    color: #2c3e50;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 15px;
 }
 
 .gas-prices-title span {
-    color: #666;
+    color: #D67E34;
     font-weight: 400;
+    position: relative;
+}
+/* линия */
+.gas-prices-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #D67E34, #FF7400);
+    border-radius: 2px;
 }
 
-.gas-types {
+/* Контейнер с карточками и изображением */
+.gas-types-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Вертикальные карточки */
+.gas-item.vertical {
+    flex: 0 1 350px;
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    height: 480px;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.gas-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    background: white;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.gas-item:hover {
+.gas-item.vertical:hover {
     transform: translateY(-5px);
-}
-
-.gas-icon {
-    font-size: 32px;
-    color: #ff6b00;
-    margin-top: 5px;
-}
-
-.gas-content h3 {
-    margin: 0 0 10px 0;
-    color: #333;
-    font-size: 20px;
-}
-
-.price {
-    color: #ff6b00;
-    font-weight: 700;
-}
-
-.gas-content p {
-    margin: 0;
-    color: #666;
-    line-height: 1.5;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 /* Menu Section */
