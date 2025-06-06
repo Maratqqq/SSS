@@ -1,36 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById("telegram-form");
-    // Этот код гарантирует, что форма будет найдена и готова к использованию 
-    // только после полной загрузки страницы
-    // а затем находит форму с идентификатором telegram-form
-    //  Это нужно, чтобы избежать ошибок при работе с формой
+    if (!form) {
+        console.error('Форма не найдена в DOM');
+        return;
+    }
+
     form.addEventListener("submit", async (e) => {
-        e.preventDefault(); //Это обработчикотправки формы.
+        e.preventDefault();
         
-        // Показываем индикатор загрузки пользователю при нажатии кнопки отправить
         const submitBtn = form.querySelector('button[type="submit"]');
+        if (!submitBtn) {
+            console.error('Кнопка отправки не найдена');
+            return;
+        }
+
         const originalBtnText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Отправка...';
         
         const botToken = "8187622465:AAGIhZQMJwnO-A2Weup8dSsvgxcjsWEO6QI";
         const chatId = "7393443572";
-        const text = `Новая заявка!\nИмя: ${form.name.value}\nТелефон: ${form.phone.value}\nСообщение: ${form.message.value}`; //Этот код собирает данные из формы и формирует сообщение для отправки в Telegram. 
+        const text = `Новая заявка!\nИмя: ${form.name.value}\nТелефон: ${form.phone.value}\nСообщение: ${form.message.value}`;
         
         try {
-            const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`); // отпровляет данные с формы с данными из формы.
+            const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`);
             
-            if (response.ok) {
-                alert("Заявка отправлена! Мы свяжемся с вами в ближайшее время."); // Если форма успешно отправлена, пользователю показывается сообщение об успехе,
-                form.reset();
-            } else {
-                throw new Error('Ошибка при отправке');
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status}`);
             }
+            
+            alert("Заявка отправлена! Мы свяжемся с вами в ближайшее время.");
+            form.reset();
         } catch (error) {
             console.error('Ошибка:', error);
             alert("Произошла ошибка при отправке. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.");
         } finally {
-            // Восстанавливаем кнопку в исходное состояние
             submitBtn.disabled = false;
             submitBtn.textContent = originalBtnText;
         }
