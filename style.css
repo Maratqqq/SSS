@@ -1042,3 +1042,9 @@ button {
         font-size: 28px;
     }
 }
+
+@media (max-width: 992px) {
+    .header-down .truck-image {
+        display: none;
+    }
+}
