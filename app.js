@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById("telegram-form");
+    
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
         
@@ -11,7 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const botToken = "8187622465:AAGIhZQMJwnO-A2Weup8dSsvgxcjsWEO6QI";
         const chatId = "7393443572";
-        const text = `Новая заявка!\nИмя: ${form.name.value}\nТелефон: ${form.phone.value}\nСообщение: ${form.message.value}`;
+        
+        // Явно получаем значения полей по их ID
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+        
+        const text = `Новая заявка!\nИмя: ${name}\nТелефон: ${phone}\nСообщение: ${message}`;
         
         try {
             const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`);
