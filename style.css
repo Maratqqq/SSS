@@ -14,17 +14,17 @@ html {
 
 /* Header Styles */
 .header {
-    background-image: url(img/fon/bg.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
+    background-image: url(bg.jpg);
+    height: 100vh; 
+    background-repeat: no-repeat; /*Позволяет не повторять наше изображение  */
     background-size: cover;
 }
 
 .header-line {
     padding-top: 50px;
-    display: flex;
+    display: flex; /*Позволяет распологаться всем элементам в линию друг за другом  */
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; /*Позволяет распологаться элементам на небольшом растоянии друг от друга  */
 }
 
 .nav-item {
@@ -37,7 +37,7 @@ html {
 }
 
 .nav-item:hover {
-    color: #d81d1d;
+    color: #FF7400;
 }
 
 .cart {
@@ -138,25 +138,25 @@ html {
 }
 
 .truck-image {
-    position: absolute;
+    position: absolute; /* Делаем элемент абсолютным чтобы мы могли его точно расположить */
     left: 800px; 
     top: 345px;
-    transform: translateY(-50%);
-    width: 55%; 
-    z-index: 1;
+    transform: translateY(-50%); /* Центрируем изображение вертикально на половину его высоты */
+    width: 55%;  /* задаем размер контейнира*/
+    z-index: 1; /* выводим изображение поверх других элементов*/
 }
 
 .truck-image img {
-    width: 100%;
+    width: 100%; /*размер изображение */
     height: auto;
     max-height: 300px;
-    object-fit: contain;
+    object-fit: contain; /* сохраняем пропорции изображения*/
 }
 
 /* Cards Section */
 .cards-holder {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* распределяем равномерное пространство между карточками*/
 }
 
 .card {
@@ -171,7 +171,7 @@ html {
 .card-image {
     display: flex;
     justify-content: center;
-    padding-top: 31px;
+    padding-top: 31px; /*внутренний отступ */
 }
 
 .card-title {
@@ -270,14 +270,14 @@ html {
 
 .imgages-3 {
     position: absolute;
-    z-index: 999;
+    z-index: 1000;
     top: 246px;
     left: 481px;
 }
 
 /* Black Block */
 .black-block {
-    background-image: url(img/fon/black-bg.png);
+    background-image: url(black-bg.png);
     padding: 80px 0;
 }
 
@@ -310,6 +310,7 @@ html {
 }
 
 /* Gas Prices */
+/* Основная секция */
 .gas-prices {
     padding: 100px 0;
     background-color: #f8f9fa;
@@ -385,9 +386,77 @@ html {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
+/* Изображение газовоза */
+.truck-image-wrapper {
+    flex: 0 1 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.truck-image-center {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Элементы карточек */
+.gas-item.vertical .gas-icon {
+    font-size: 48px;
+    margin-bottom: 25px;
+    color: #FF7400;
+    background: rgba(214, 126, 52, 0.1);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.gas-item.vertical h3 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.gas-item.vertical .price {
+    color: #D67E34;
+    font-weight: 700;
+    font-size: 32px;
+    display: block;
+    margin: 10px 0 25px;
+}
+
+.gas-item.vertical p {
+    margin: 0;
+    color: #7f8c8d;
+    line-height: 1.7;
+    font-size: 17px;
+    max-width: 280px;
+}
+
+/* Дополнительные декоративные элементы */
+.gas-prices:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('gas-pattern.png') repeat;
+    opacity: 0.03;
+    z-index: 1;
+}
+
+
 /* Menu Section */
 .menu {
-    background-image: url(img/fon/menu-bg.png);
+    background-image: url(menu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
@@ -470,7 +539,7 @@ html {
     text-align: center;
 }
 
-/* Contact Form */
+/* Contact Form общие стили*/
 .contact-form {
     background-color: #f8f9fa;
     padding: 60px 0;
@@ -480,8 +549,8 @@ html {
 /* Базовые стили секции */
 .faq-section {
   font-family: Arial, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирует контейнер на странице */
   padding: 30px 20px;
   background-color: #f9f9f9;
 }
@@ -489,7 +558,7 @@ html {
 /* Заголовок секции */
 .section-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 40px; 
 }
 
 .section-header h2 {
@@ -506,16 +575,16 @@ html {
 /* Контейнер вопросов */
 .faq-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   gap: 15px;
 }
 
 /* Элемент вопроса */
 .faq-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  background: white;
+  border: 1px solid #ddd; /* Светлая рамка вокруг блока */
+  border-radius: 8px; /* Закругленные углы рамки */
+  overflow: hidden; /* Скрывает переполнение контента */
+  background: white; /* Белый фон блока */
 }
 
 /* Вопрос */
@@ -524,7 +593,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer; /* Изменяет курсор на указатель, показывая, что блок кликабельный */
 }
 
 .faq-question h3 {
@@ -881,5 +950,95 @@ button {
     
     .form-control {
         padding: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .gas-types-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .gas-item.vertical {
+        max-width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+    
+    .truck-image-wrapper {
+        order: -1;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .gas-item.vertical h3 {
+        font-size: 20px;
+    }
+    
+    .gas-item.vertical p {
+        font-size: 14px;
+    }
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+    .gas-types-container {
+        gap: 40px;
+    }
+    
+    .gas-item.vertical {
+        flex: 0 1 300px;
+        height: 420px;
+        padding: 30px 20px;
+    }
+    
+    .truck-image-wrapper {
+        flex: 0 1 400px;
+    }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .gas-prices {
+        padding: 70px 0;
+    }
+    
+    .gas-prices-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .gas-types-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .gas-item.vertical {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding: 35px 25px;
+    }
+    
+    .truck-image-wrapper {
+        order: -1;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .gas-item.vertical .gas-icon {
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .gas-item.vertical h3 {
+        font-size: 24px;
+    }
+    
+    .gas-item.vertical .price {
+        font-size: 28px;
     }
 }
