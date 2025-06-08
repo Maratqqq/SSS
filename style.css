@@ -1117,3 +1117,41 @@ button {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .header-title {
+        margin-top: 80px; /* Уменьшаем отступ сверху на мобильных */
+        margin-bottom: 30px; /* Увеличиваем отступ снизу */
+        font-size: 28px; /* Опционально: уменьшаем размер шрифта */
+        line-height: 1.3; /* Улучшаем читаемость */
+    }
+
+    .header-suptitle {
+        margin-bottom: 30px; /* Добавляем отступ перед кнопкой */
+        font-size: 16px; /* Опционально: уменьшаем подзаголовок */
+    }
+
+    .header-button {
+        margin-top: 20px; /* Добавляем отступ сверху */
+        padding: 12px 24px; /* Опционально: увеличиваем кнопку */
+    }
+}
+
+/* Для очень маленьких экранов (например, iPhone SE) */
+@media (max-width: 576px) {
+    .header-title {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .header-suptitle {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .header-button {
+        margin-top: 15px;
+        padding: 10px 20px;
+    }
+}
