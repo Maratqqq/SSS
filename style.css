@@ -1046,7 +1046,7 @@ button {
 @media (max-width: 992px) {
     .header-down .truck-image {
 
-        /* Burger Menu Styles */
+   /* Burger Menu Styles */
 .burger-menu {
     display: none;
     position: relative;
@@ -1111,9 +1111,6 @@ button {
     }
     
     .nav, .phone, .btn {
-        display: none;
-    }
-}
         display: none;
     }
 }
