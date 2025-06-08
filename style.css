@@ -14,7 +14,7 @@ html {
 
 /* Header Styles */
 .header {
-    background-image: url(img/fon/bg.jpg);
+    background-image: url(bg.jpg);
     height: 100vh; 
     background-repeat: no-repeat; /*Позволяет не повторять наше изображение  */
     background-size: cover;
@@ -277,7 +277,7 @@ html {
 
 /* Black Block */
 .black-block {
-    background-image: url(img/fon/black-bg.png);
+    background-image: url(black-bg.png);
     padding: 80px 0;
 }
 
@@ -456,7 +456,7 @@ html {
 
 /* Menu Section */
 .menu {
-    background-image: url(img/fon/menu-bg.png);
+    background-image: url(menu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
@@ -1045,8 +1045,11 @@ button {
 
 @media (max-width: 992px) {
     .header-down .truck-image {
+        display: none;
+    }
+}
 
-   /* Burger Menu Styles */
+/* Burger Menu Styles */
 .burger-menu {
     display: none;
     position: relative;
