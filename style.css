@@ -14,7 +14,7 @@ html {
 
 /* Header Styles */
 .header {
-    background-image: url(bg.jpg);
+    background-image: url(img/fon/bg.jpg);
     height: 100vh; 
     background-repeat: no-repeat; /*Позволяет не повторять наше изображение  */
     background-size: cover;
@@ -277,7 +277,7 @@ html {
 
 /* Black Block */
 .black-block {
-    background-image: url(black-bg.png);
+    background-image: url(img/fon/black-bg.png);
     padding: 80px 0;
 }
 
