@@ -456,7 +456,7 @@ html {
 
 /* Menu Section */
 .menu {
-    background-image: url(menu-bg.png);
+    background-image: url(img/fon/menu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
