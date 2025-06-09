@@ -1155,3 +1155,7 @@ button {
         padding: 10px 20px;
     }
 }
+
+.burger-slide.disp {
+    display: none !important;
+}
